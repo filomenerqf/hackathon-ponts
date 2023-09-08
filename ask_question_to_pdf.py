@@ -14,6 +14,11 @@ def open_file(filepath):
         return infile.read()
 
 
+def open_text_file(filepath):
+    with open(filepath, "r", encoding="utf-8") as text_file:
+        return text_file.read()
+
+
 openai.api_key = os.getenv("OPENAI_API_KEY")
 openai.organization = os.getenv("OPENAI_ORGANIZATION")
 
@@ -80,7 +85,9 @@ def split_text(text, chunk_size=5000):
 
 
 filename = os.path.join(os.path.dirname(__file__), "filename.pdf")
-document = read_pdf(filename)
+filename_txt = os.path.join(os.path.dirname(__file__), "histoire.txt")
+# document = read_pdf(filename)
+document = open_text_file(filename)
 chunks = split_text(document)
 
 
