@@ -72,7 +72,7 @@ const handleQuestionClick = async (event) => {
   });
 };
 
-questionButton.addEventListener("click", handleQuestionClick);
+questionButton.addEventListener("click");
 
 dark_mode_button.addEventListener("click", () => {
   body.classList.toggle("dark_mode");
