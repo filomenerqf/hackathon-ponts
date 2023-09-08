@@ -91,6 +91,7 @@ body.dark_mode {
   padding: 5px;
   border-radius: 5px;
   background-color: var(--main-background-color);
+  color: var(--main-color);
 }
 
 .button:hover,
@@ -168,5 +169,15 @@ body.dark_mode {
 
   100% {
     transform: translate(calc(var(--loader-bullet-size) * 2), 0);
+  }
+}
+
+@keyframes loader3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
   }
 }
