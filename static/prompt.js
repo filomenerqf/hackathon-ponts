@@ -30,6 +30,9 @@ const appendAIMessage = async (messagePromise) => {
 
 const handlePrompt = async (event) => {
   event.preventDefault();
+  if (event.submitter === dark_mode_button) {
+    return; // Ne rien faire si le bouton "dark mode" est cliqué
+  }
   // Parse form data in a structured object
   const data = new FormData(event.target);
   promptForm.reset();
@@ -71,6 +74,8 @@ const handleQuestionClick = async (event) => {
     return question;
   });
 };
+
+questionButton.addEventListener("click", handleQuestionClick);
 
 dark_mode_button.addEventListener("click", () => {
   body.classList.toggle("dark_mode");

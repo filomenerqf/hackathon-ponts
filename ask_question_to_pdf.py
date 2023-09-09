@@ -87,7 +87,7 @@ def split_text(text, chunk_size=5000):
 filename = os.path.join(os.path.dirname(__file__), "filename.pdf")
 filename_txt = os.path.join(os.path.dirname(__file__), "histoire.txt")
 # document = read_pdf(filename)
-document = open_text_file(filename)
+document = open_text_file(filename_txt)
 chunks = split_text(document)
 
 
